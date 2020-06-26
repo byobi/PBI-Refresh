@@ -1,0 +1,93 @@
+{
+  "refresh": {
+    "type": "full",
+    "objects": [
+      {
+        "database": "AdventureWorksDW-CustomerSales",
+        "table": "Internet Sales",
+        "partition": "Internet Sales Today"
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{   
+  "sequence":    
+    {   
+      "maxParallelism": 4,   
+      "operations": [ 
+		{
+		  "refresh": {
+			"type": "dataOnly",
+			"objects": [
+			  {
+				"database": "AdventureWorksDW-CustomerSales",
+				"table": "Internet Sales",
+				"partition": "Internet Sales Today"
+			  },
+			  {
+				"database": "AdventureWorksDW-CustomerSales",
+				"table": "Customer"
+			  }
+			]
+		  }
+		}  
+      ]   
+    }      
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "refresh": {
+    "type": "calculate",
+    "objects": [
+      {
+        "database": "AdventureWorksDW-CustomerSales"
+      }
+    ]
+  }
+}
